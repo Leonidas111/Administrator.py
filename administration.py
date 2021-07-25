@@ -52,21 +52,20 @@ def run():
         if opcion == 4:
             os.system("cls")
             with open ("./ingresos.py","r",encoding="utf-8")as ai:
-                lista_ai = ""
+                print("INGRESOS:")
+                print("\n")
                 for line in ai:
-                    lista_ai = ("$."+line) + lista_ai
+                    print(f"$.{line}")
             with open ("./egresos.py","r",encoding="utf-8")as ae:
-                lista_ae = ""
+                print("EGRESOS:")
+                print("\n")
                 for line in ae:
-                    lista_ae = ("$."+line) + lista_ae
-            print("Ingresos:" +("\n")+(lista_ai)) 
-            print("Egresos:" +("\n")+(lista_ae))
+                    print(f"$.{line} ")
             time.sleep(3)
             return run()
         #OPCION 5 SALIR    
         if opcion == 5:
             exit()
-
     else:
         print("Ingresa una opcion correcta:")
         return run()
